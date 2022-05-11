@@ -1,1 +1,2 @@
-# vida_front
+![Vida](./src/assets/img/brand/logo.png)
+# vida front
