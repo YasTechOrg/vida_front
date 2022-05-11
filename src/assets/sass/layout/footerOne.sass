@@ -1,0 +1,90 @@
+@import ../public/colors
+
+footer[data-fm-1]
+  height: 490px
+
+  > div
+    max-width: 1440px
+    background-image: url("../../img/images/footer_bg1.svg")
+    background-repeat: no-repeat
+    background-position: top
+    background-size: contain
+    padding: 0 20px 50px
+
+    > img
+      width: fit-content
+      margin-bottom: 18px
+
+      @media screen and (max-width: 800px)
+        align-self: center!important
+
+    > div
+      @media screen and (max-width: 800px)
+        max-width: 520px
+        width: 100%
+        margin: auto!important
+
+      > .col-sm-6
+        @media screen and (max-width: 800px)
+          width: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-bottom: 36px
+          > p
+            text-align: justify
+
+        > p
+          max-width: 450px
+          font-size: 24px
+          font-weight: 300
+          color: $vida_neutral_black
+
+      > .links
+        @media screen and (max-width: 800px)
+          width: 30%
+          padding-left: 5px!important
+
+        > a
+          max-width: 94px
+          width: 100%
+          text-align: center
+          color: $vida_neutral_black
+          text-decoration: none
+          font-size: 24px
+          font-weight: 300
+          transition: 0.2s
+          white-space: nowrap
+
+        > a:hover
+          color: $vida_brand_orange
+
+      > .info
+        @media screen and (max-width: 800px)
+          width: 70%
+          padding-right: 5px!important
+
+        > button
+          background-color: $vida_brand_orange
+          border: none
+          outline: none
+          color: $vida_neutral_white
+          padding: 14px 27px
+          font-size: 18px
+          font-weight: 500
+          border-radius: 16px
+          box-shadow: 4px 4px 15px rgba(255, 121, 0, 0.3)
+
+        > p
+          padding: 0 10px
+          max-width: 206px
+          margin-top: 20px
+          font-size: 18px
+          font-weight: 500
+          color: $vida_brand_gray
+
+        > div
+          padding: 0 10px
+
+          > img:not(:last-child)
+            margin-right: 15px

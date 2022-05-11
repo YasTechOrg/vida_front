@@ -4,12 +4,14 @@ import {defineAsyncComponent} from "vue"
 
 // LAYOUT
 const HeaderOne = defineAsyncComponent(() => import("./components/layout/HeaderOne.vue"))
+const FooterOne = defineAsyncComponent(() => import("./components/layout/FooterOne.vue"))
 </script>
 
 <template>
   <div id="main">
     <HeaderOne/>
     <router-view/>
+    <FooterOne/>
   </div>
 </template>
 
