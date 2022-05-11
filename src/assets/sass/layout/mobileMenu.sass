@@ -1,0 +1,50 @@
+@import ../public/colors
+
+.mobileMenu:not(.showMenu)
+  z-index: -300
+  opacity: 0
+
+.mobileMenu
+  transition: 0.2s
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  overflow: auto
+  background-color: $vida_neutral_black
+  z-index: 99999
+
+  > div
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    max-width: 182px
+    width: 100%
+
+    > .line
+      height: 1px
+      margin-top: 22px
+      width: 100%
+      background-color: $vida_gray_1
+
+    > .items
+      margin-top: 20%
+
+      > .mobileMenuItem:not(:last-child)
+        margin-bottom: 34px
+
+  > p
+    left: 50%
+    right: 50%
+    transform: translateX(-50%)
+    bottom: 20px
+    white-space: nowrap
+    font-size: 18px
+    line-height: 18px
+    color: $vida_gray_1
+    font-weight: normal
+
+    > img
+      margin-right: 10px
