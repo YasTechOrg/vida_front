@@ -3,10 +3,10 @@
 
 <template>
   <div id="home">
-    hi
+    <section data-s-1>
+
+    </section>
   </div>
 </template>
 
-<style scoped lang="sass">
-
-</style>
+<style scoped lang="sass" src="../assets/sass/pages/home.sass"></style>

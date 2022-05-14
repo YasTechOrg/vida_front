@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 
-import {computed, defineAsyncComponent, ref} from "vue"
+import {computed, defineAsyncComponent, defineProps, ref} from "vue"
 import store from "../../store"
 
-const HeaderOneItem = defineAsyncComponent(() => import("./HeaderOneItem.vue"))
+const HeaderOneItem = defineAsyncComponent(() => import("./HeaderItem.vue"))
 const MobileMenu = defineAsyncComponent(() => import("./MobileMenu.vue"))
 
 const menu_items = ref([
@@ -16,6 +16,10 @@ const menu_items = ref([
   { href: "/team", text: "تیم ما" },
 ])
 
+defineProps<{
+  fixed: boolean
+}>()
+
 const isMenuShow = computed({
   get() { return store.state.isMenuShow },
   set(newValue) { store.commit("setMenuState", newValue) }
@@ -25,7 +29,7 @@ const isMenuShow = computed({
 
 <template>
   <MobileMenu :showMenu="isMenuShow" @closeMenu="isMenuShow = false"/>
-  <header data-hm-1 class="d-flex justify-content-center align-items-stretch">
+  <header class="d-flex justify-content-center align-items-stretch" :class="{ 'fixed': fixed === true }">
     <div class="row m-0 w-100">
       <div class="col-2 d-flex justify-content-center align-items-center s1">
         <p class="m-0 d-flex justify-content-center align-items-center"><img src="../../assets/img/icon/icon_phone_gray.svg" alt="Phone">021-55823262</p>
@@ -41,4 +45,4 @@ const isMenuShow = computed({
   </header>
 </template>
 
-<style scoped lang="sass" src="../../assets/sass/layout/headerOne.sass"></style>
+<style scoped lang="sass" src="../../assets/sass/layout/header.sass"></style>

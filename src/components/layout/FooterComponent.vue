@@ -4,7 +4,7 @@
 
 <template>
 
-  <footer data-fm-1 class="d-flex justify-content-center align-items-stretch">
+  <footer class="d-flex justify-content-center align-items-stretch">
     <div class="w-100 d-flex flex-column align-items-stretch justify-content-end">
       <img src="../../assets/img/brand/logo_x2.svg" class="align-self-end" alt="Vida Creative Agency">
 
@@ -32,4 +32,4 @@
   </footer>
 </template>
 
-<style scoped lang="sass" src="../../assets/sass/layout/footerOne.sass"></style>
+<style scoped lang="sass" src="../../assets/sass/layout/footer.sass"></style>

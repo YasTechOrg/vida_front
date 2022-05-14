@@ -3,13 +3,13 @@
 import {defineAsyncComponent} from "vue"
 
 // LAYOUT
-const HeaderOne = defineAsyncComponent(() => import("./components/layout/HeaderOne.vue"))
-const FooterOne = defineAsyncComponent(() => import("./components/layout/FooterOne.vue"))
+const HeaderOne = defineAsyncComponent(() => import("./components/layout/HeaderComponent.vue"))
+const FooterOne = defineAsyncComponent(() => import("./components/layout/FooterComponent.vue"))
 </script>
 
 <template>
   <div id="main">
-    <HeaderOne/>
+    <HeaderOne :fixed="$route.path === '/'"/>
     <router-view/>
     <FooterOne/>
   </div>
