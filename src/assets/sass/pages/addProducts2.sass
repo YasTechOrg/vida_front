@@ -1,0 +1,115 @@
+@import ../public/colors
+
+#addProducts2
+  background-image: url("../../img/images/addService_bg1.png")
+  background-repeat: no-repeat
+  background-size: 100%
+  @media screen and (max-width: 600px)
+    background-size: 110%
+
+  @media screen and (max-width: 500px)
+    background-size: 140%
+
+
+  form
+    padding: 40px 10%
+    border-radius: 16px
+    position: relative
+    font-size: 18px
+    width: 45%
+    min-width: 675px
+
+    label
+      color: $vida_gray_4
+
+    .form-control, .form-select, button.btn
+      box-shadow: none
+      border: none
+
+    input, select
+      background-color: $vida_brand_whitesmoke
+
+    select.form-select
+      background-image: url("../../img/icon/icon_arrow_bottom.svg")
+      background-position: left 17px center
+      background-size: 9px 4px
+
+    button
+      background-color: $vida_brand_orange
+      color: $vida_neutral_white
+      margin: 0 auto
+      position: relative
+      top: 60px
+      padding: 14px 45px
+
+    p
+      font-size: 30px
+
+  div:last-child
+    padding: 20px
+    p
+      font-size: 25px
+      color: $vida_neutral_black
+
+
+    span
+      background-color: $vida_brand_orange
+      color: $vida_brand_orange
+      width: 10px
+      height: 10px
+      border-radius: 50%
+
+  .box-shadow-sp:before, .box-shadow-sp:after
+    z-index: -1
+    position: absolute
+    content: ""
+    bottom: 15px
+    left: 10px
+    width: 50%
+    top: 80%
+    max-width: 300px
+    background: #777
+    -webkit-box-shadow: 0 15px 10px #777
+    -moz-box-shadow: 0 15px 10px #777
+    box-shadow: 0 15px 10px #777
+    -webkit-transform: rotate(-3deg)
+    -moz-transform: rotate(-3deg)
+    -o-transform: rotate(-3deg)
+    -ms-transform: rotate(-3deg)
+    transform: rotate(-3deg)
+
+  .box-shadow-sp:after
+    -webkit-transform: rotate(3deg)
+    -moz-transform: rotate(3deg)
+    -o-transform: rotate(3deg)
+    -ms-transform: rotate(3deg)
+    transform: rotate(3deg)
+    right: 10px
+    left: auto
+
+  @media screen and (max-width: 1050px)
+    img:first-child
+      width: 120px
+
+    form
+      width: 60%
+      min-width: 400px
+
+    div:last-child > p
+      width: 80% !important
+      margin-bottom: 100px
+      font-size: 20px
+
+
+  @media screen and (max-width: 400px)
+
+    img:first-child
+      width: 100px
+    form
+      width: 100%
+      min-width: 250px
+
+    div:last-child > p
+      width: 90% !important
+      margin-bottom: 250px
+      font-size: 18px
