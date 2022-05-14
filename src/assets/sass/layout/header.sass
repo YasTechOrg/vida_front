@@ -8,6 +8,8 @@
 
 header
   height: 112px
+  @media screen and (max-width: 1050px)
+    height: 70px
 
   > div
     max-width: 1440px
@@ -30,8 +32,8 @@ header
         width: 50%
 
       > .s1
-        justify-content: start!important
-        padding-left: 30px!important
+        justify-content: end!important
+        padding-right: 30px!important
 
         > p
           display: none!important
@@ -40,5 +42,8 @@ header
           display: unset!important
 
       > .s3
-        justify-content: end!important
-        padding-right: 30px!important
+        justify-content: start!important
+        padding-left: 30px!important
+
+        > img
+          height: 21px

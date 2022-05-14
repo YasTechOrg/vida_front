@@ -31,15 +31,16 @@ const isMenuShow = computed({
   <MobileMenu :showMenu="isMenuShow" @closeMenu="isMenuShow = false"/>
   <header class="d-flex justify-content-center align-items-stretch" :class="{ 'fixed': fixed === true }">
     <div class="row m-0 w-100">
-      <div class="col-2 d-flex justify-content-center align-items-center s1">
-        <p class="m-0 d-flex justify-content-center align-items-center"><img src="../../assets/img/icon/icon_phone_gray.svg" alt="Phone">021-55823262</p>
-        <img src="../../assets/img/icon/icon_menu_gray.svg" class="d-none" alt="menu" @click="isMenuShow = !isMenuShow">
+
+      <div class="col-2 d-flex justify-content-center align-items-center s3">
+        <img src="../../assets/img/brand/logo.png" alt="Vida">
       </div>
       <div class="col-8 s2 d-flex d-flex justify-content-center align-items-center" dir="rtl">
         <HeaderOneItem v-for="(item, index) in menu_items" :key="item" :text="item.text" :to="item.href" :spec="menu_items.length - 1 !== index"/>
       </div>
-      <div class="col-2 d-flex justify-content-center align-items-center s3">
-        <img src="../../assets/img/brand/logo.png" alt="Vida">
+      <div class="col-2 d-flex justify-content-center align-items-center s1">
+        <p class="m-0 d-flex justify-content-center align-items-center"><img src="../../assets/img/icon/icon_phone_gray.svg" alt="Phone">021-55823262</p>
+        <img src="../../assets/img/icon/icon_menu_gray.svg" class="d-none" alt="menu" @click="isMenuShow = !isMenuShow">
       </div>
     </div>
   </header>

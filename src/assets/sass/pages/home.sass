@@ -3,4 +3,55 @@
 #home
 
   section[data-s-1]
+    background-image: url("../../img/images/home_vector1.svg")
+    background-repeat: no-repeat
+    background-size: contain
     height: 670px
+
+    > div
+      max-width: 1440px
+      margin-right: auto!important
+      margin-left: auto!important
+
+      > .col-sm-6:first-child
+
+        > h1
+          margin-top: 35%
+          color: $vida_brand_orange
+          font-size: 58px
+          font-weight: 500
+          margin-bottom: 22px
+
+        > p
+          font-size: 28px
+          color: $vida_neutral_black
+          font-weight: 300
+          max-width: 480px
+
+        > div
+          margin-top: 56px
+
+          > button
+            border: none
+            outline: none
+            padding: 11px 55px
+            border-radius: 16px
+
+          > button:first-child
+            box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.1)
+            background-color: white
+            color: $vida_brand_orange
+            margin-left: 20px
+
+          > button:last-child
+            background-color: $vida_brand_orange
+            color: white
+            box-shadow: 4px 4px 15px rgba(255, 121, 0, 0.3)
+
+      > .col-sm-6:last-child
+
+        > h3, > h1
+          margin-bottom: 0
+          color: $vida_gray_4
+          font-style: normal
+          font-weight: 200
