@@ -10,8 +10,14 @@
 
     > div
       max-width: 1440px
+      height: 100%
       margin-right: auto!important
       margin-left: auto!important
+      background-image: url("../../img/images/home_vector2.svg")
+      background-repeat: no-repeat
+      background-position: left 0 top 80%
+      @media screen and (max-width: 1440px)
+        background-position: left -20% top 80%
 
       > .col-sm-6:first-child
 
@@ -50,8 +56,20 @@
 
       > .col-sm-6:last-child
 
-        > h3, > h1
-          margin-bottom: 0
-          color: $vida_gray_4
-          font-style: normal
-          font-weight: 200
+        > div
+          margin-top: 35%
+
+          > h3
+            margin-bottom: 0
+            color: $vida_gray_4
+            font-style: normal
+            font-weight: 200
+            opacity: 0.2
+            font-size: 48px
+
+          > h3:first-child
+            font-weight: 400
+
+          > h3:last-child
+            font-weight: 700
+
