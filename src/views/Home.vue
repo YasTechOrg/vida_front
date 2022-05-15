@@ -30,6 +30,12 @@
         </div>
       </div>
     </section>
+
+    <section data-s-2 dir="rtl">
+      <div>
+        <h1>خدمات تیم ویدا</h1>
+      </div>
+    </section>
   </div>
 </template>
 

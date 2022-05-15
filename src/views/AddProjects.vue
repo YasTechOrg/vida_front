@@ -4,7 +4,7 @@
 
 <template>
   <div id="addProducts" class="d-flex flex-column justify-content-start align-items-center" data-safe>
-    <img src="../assets/img/images/addService_vector1.png" alt="vector">
+    <img src="../assets/img/images/add_service/vector1.png" alt="vector">
     <form class="d-flex flex-column justify-content-center align-items-center position-relative">
       <h1>ثبت پروژه</h1>
 

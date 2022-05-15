@@ -2,8 +2,14 @@
 
 #home
 
+  @mixin inner
+    max-width: 1440px
+    height: 100%
+    margin-right: auto!important
+    margin-left: auto!important
+
   section[data-s-1]
-    background-image: url("../../img/images/home_vector1.svg")
+    background-image: url("../../img/images/home/section1_vector1.svg")
     background-repeat: no-repeat
     background-size: contain
     height: 670px
@@ -32,11 +38,8 @@
         box-shadow: 4px 4px 15px rgba(255, 121, 0, 0.3)
 
     > div
-      max-width: 1440px
-      height: 100%
-      margin-right: auto!important
-      margin-left: auto!important
-      background-image: url("../../img/images/home_vector2.svg")
+      @include inner
+      background-image: url("../../img/images/home/section1_vector2.svg")
       background-repeat: no-repeat
       background-position: left 0 bottom 10%
 
@@ -139,3 +142,13 @@
           > h3:last-child
             font-weight: 700
 
+  section[data-s-2]
+    margin-top: 64px
+
+    > div
+      @include inner
+
+      > h1
+        color: $vida_brand_orange
+        font-size: 34px
+        font-weight: 500
