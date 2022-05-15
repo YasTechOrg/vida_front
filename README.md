@@ -45,7 +45,12 @@ yarn build
   - Website : [hossara.com](https://hossara.com)
   - Instagram : @hossara.dev | @hossara.pv
   - LinkedIn : @dev-haraghi
+- Sahar Hallaji
+  - Email : saharhallaji.dev@gmail.com
+  - Website : [saharhallaji.com](https://saharhallaji.com)
+  - Instagram : @saharhallaji.dev
+  - LinkedIn : @shrhlljidev
 
 ### Screen Shots
 ![Screen Shot1](./screenshots/p1.png)
-![Screen Shot2](./screenshots/p2.png)
+![Screen Shot3](./screenshots/p2.png)
