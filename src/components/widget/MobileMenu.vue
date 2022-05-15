@@ -33,4 +33,4 @@ defineProps<{
   </div>
 </template>
 
-<style lang="sass" src="../../assets/sass/layout/mobileMenu.sass" scoped></style>
+<style lang="sass" src="../../assets/sass/widget/mobileMenu.sass" scoped></style>

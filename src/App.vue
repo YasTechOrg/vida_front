@@ -3,8 +3,8 @@
 import {defineAsyncComponent} from "vue"
 
 // LAYOUT
-const HeaderOne = defineAsyncComponent(() => import("./components/layout/HeaderComponent.vue"))
-const FooterOne = defineAsyncComponent(() => import("./components/layout/FooterComponent.vue"))
+const HeaderOne = defineAsyncComponent(() => import("./components/widget/HeaderWidget.vue"))
+const FooterOne = defineAsyncComponent(() => import("./components/widget/FooterWidget.vue"))
 </script>
 
 <template>

@@ -32,4 +32,4 @@
   </footer>
 </template>
 
-<style scoped lang="sass" src="../../assets/sass/layout/footer.sass"></style>
+<style scoped lang="sass" src="../../assets/sass/widget/footerWidget.sass"></style>

@@ -11,4 +11,4 @@ defineProps<{
   <router-link class="mobileMenuItem text-decoration-none d-flex justify-content-center align-items-center" :to="to" active-class="ac">{{ text }}</router-link>
 </template>
 
-<style scoped lang="sass" src="../../assets/sass/layout/mobileMenuItem.sass"></style>
+<style scoped lang="sass" src="../../assets/sass/widget/mobileMenuItem.sass"></style>

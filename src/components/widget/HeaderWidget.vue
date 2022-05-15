@@ -46,4 +46,4 @@ const isMenuShow = computed({
   </header>
 </template>
 
-<style scoped lang="sass" src="../../assets/sass/layout/header.sass"></style>
+<style scoped lang="sass" src="../../assets/sass/widget/headerWidget.sass"></style>

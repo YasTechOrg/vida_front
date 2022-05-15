@@ -32,8 +32,12 @@
     </section>
 
     <section data-s-2 dir="rtl">
-      <div>
+      <div class="d-flex flex-column justify-content-start">
         <h1>خدمات تیم ویدا</h1>
+
+        <div>
+
+        </div>
       </div>
     </section>
   </div>
