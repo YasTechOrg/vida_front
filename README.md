@@ -1,6 +1,6 @@
 ![Vida](./src/assets/img/brand/logo.png)
 # vida front
-
+![DEV](https://img.shields.io/badge/DEV-v1.1.0-red)
 
 ### Navigation
 - [How To Setup Project](#setup)
