@@ -1,0 +1,19 @@
+@import ../public/colors
+
+.sliderPagination
+  width: 25%
+  height: 2px
+  margin: 30px 100px 0
+  background-color: $vida_gray_3
+  @media screen and (max-width: 1300px)
+    margin: 30px 80px 0
+
+  @media screen and (max-width: 1140px)
+    width: 40%
+    margin: 30px auto auto
+
+  > div
+    height: 100%
+    width: fit-content
+    background-color: $vida_brand_orange
+    transition: width 400ms ease

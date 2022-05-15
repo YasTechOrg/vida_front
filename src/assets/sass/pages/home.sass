@@ -2,8 +2,8 @@
 
 #home
 
-  @mixin inner
-    max-width: 1440px
+  @mixin inner($mw)
+    max-width: $mw
     height: 100%
     margin-right: auto!important
     margin-left: auto!important
@@ -18,27 +18,15 @@
     @mixin btn
 
       > button
-        border: none
-        outline: none
-        padding: 11px 55px
-        border-radius: 16px
         @media screen and (max-width: 740px)
           padding-left: 44px
           padding-right: 44px
 
       > button:first-child
-        box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.1)
-        background-color: white
-        color: $vida_brand_orange
         margin-left: 20px
 
-      > button:last-child
-        background-color: $vida_brand_orange
-        color: white
-        box-shadow: 4px 4px 15px rgba(255, 121, 0, 0.3)
-
     > div
-      @include inner
+      @include inner(1440px)
       background-image: url("../../img/images/home/section1_vector2.svg")
       background-repeat: no-repeat
       background-position: left 0 bottom 10%
@@ -145,11 +133,11 @@
     background-image: url("../../img/images/home/section2_vector1.svg")
     background-repeat: no-repeat
     background-position: top 25px left 0
-    background-size: 90%
+    background-size: 85%
     min-height: 1400px
     @media screen and (max-width: 1440px)
       background-size: 98%
-      min-height: 1200px
+      min-height: 1100px
 
     @media screen and (max-width: 770px)
       padding: 0
@@ -173,7 +161,7 @@
 
     > div
       z-index: 999
-      @include inner
+      @include inner(1440px)
 
       > h1
         color: $vida_brand_orange
@@ -186,4 +174,100 @@
           margin-bottom: 60px
 
       > div
-        margin: 0 -20px!important
+        margin: 0 -20px
+        @media screen and (max-width: 770px)
+          margin: 0
+
+  div[data-sg-1]
+    background-image: url("../../img/images/home/section3_bg1.svg")
+    background-repeat: no-repeat
+    background-position: right
+    background-size: contain
+
+    @media screen and (min-width: 1440px)
+      margin-top: -350px
+
+    @media screen and (max-width: 770px)
+      margin-top: 140px
+
+  section[data-s-3]
+
+    > div
+      @include inner(1440px)
+
+      > div
+        padding: 0 30px
+        @media screen and (max-width: 770px)
+          justify-content: center!important
+          align-items: center!important
+
+      > .col-md-6:first-child
+
+        > picture, > picture > img
+          width: 100%
+          height: auto
+          max-width: 464px
+          position: relative
+          @media screen and (max-width: 1440px)
+
+        > picture:after
+          position: absolute
+          content: ""
+          width: 74px
+          height: 75px
+          background-color: $vida_brand_blue
+          z-index: 999
+          bottom: -38px
+          border-radius: 360px
+          right: 50px
+
+        > picture:before
+          position: absolute
+          content: ""
+          width: 301px
+          height: 223px
+          background-image: url("../../img/images/public/public_dots.svg")
+          background-repeat: no-repeat
+          right: -80px
+          top: -90px
+          @media screen and (max-width: 1440px)
+            right: 0
+
+      > .col-md-6:last-child
+        @media screen and (max-width: 770px)
+          margin-top: 52px
+
+        > h1
+          color: $vida_brand_orange
+          font-size: 34px
+          font-weight: 500
+          @media screen and (max-width: 770px)
+            font-size: 24px
+            font-weight: 600
+
+        > p
+          color: $vida_gray_5
+          font-size: 24px
+          font-weight: 300
+          @media screen and (max-width: 770px)
+            font-size: 18px
+
+        > div, > p
+          max-width: 480px
+          @media screen and (max-width: 770px)
+            max-width: 295px
+
+  section[data-s-4]
+    margin-top: 188px
+    padding: 0 40px
+    @media screen and (max-width: 770px)
+      padding: 0 22px
+
+    > div
+      @include inner(1440px)
+
+      > h1
+        color: $vida_brand_orange
+        font-size: 34px
+        font-weight: 500
+        margin-bottom: 20px

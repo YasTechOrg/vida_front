@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 
-import {defineAsyncComponent} from "vue"
+import {defineAsyncComponent, ref} from "vue"
 
 const CardBase = defineAsyncComponent(() => import("../components/layout/CardBase.vue"))
-
-
+const ButtonWhite = defineAsyncComponent(() => import("../components/widget/ButtonWhite.vue"))
+const ButtonOrange = defineAsyncComponent(() => import("../components/widget/ButtonOrange.vue"))
+const SliderPagination = defineAsyncComponent(() => import("../components/layout/SliderPagination.vue"))
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
 
 import campaign from "../assets/img/images/home/section2_campaign.svg"
 import seo from "../assets/img/images/home/section2_seo.svg"
@@ -22,6 +24,20 @@ const section2Cards = [
   { img: branding, title: "برندسازی و روابط عمومی دیجیتال", path: "/services" }
 ]
 
+
+const blog_slider_breakpoints = ref({
+  1140: {
+    itemsToShow: 3,
+    snapAlign: 'start',
+  },
+
+  0: {
+    itemsToShow: 1,
+    itemsToScroll: 1,
+    snapAlign: 'start',
+  },
+})
+
 </script>
 
 <template>
@@ -36,8 +52,8 @@ const section2Cards = [
           <p class="mb-0">تسا مزال هک نانچنآرطس و نوتس رد هلجم وچ تعنص زا موهفمان یگداــس دــیلوت اب </p>
 
           <div class="d-flex justify-content-start align-items-center">
-            <button type="button">ثبت پروژه</button>
-            <button type="button">ثبت پروژه</button>
+            <ButtonWhite>ثبت پروژه</ButtonWhite>
+            <ButtonOrange>ثبت پروژه</ButtonOrange>
           </div>
         </div>
         <div class="p2 col-sm-6 d-flex flex-column justify-content-start align-items-end">
@@ -48,8 +64,8 @@ const section2Cards = [
         </div>
 
         <div class="bt_bar d-flex justify-content-center align-items-end">
-          <button type="button">ثبت پروژه</button>
-          <button type="button">ثبت پروژه</button>
+          <ButtonWhite>ثبت پروژه</ButtonWhite>
+          <ButtonOrange>ثبت پروژه</ButtonOrange>
         </div>
       </div>
     </section>
@@ -80,6 +96,43 @@ const section2Cards = [
         </div>
       </div>
     </section>
+
+    <div class="d-flex flex-column" data-sg-1>
+      <section data-s-3 dir="rtl" class="d-flex justify-content-center align-items-start">
+        <div class="row m-0 w-100">
+          <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <picture>
+              <img src="../assets/img/images/home/section3_img1.png" alt="vida">
+            </picture>
+          </div>
+          <div class="col-md-6 d-flex flex-column justify-content-start">
+            <h1>درباره تیم ویدا:</h1>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+            <div class="align-items-start d-flex justify-content-end ali\">
+              <ButtonWhite>آشنایی با اعضای تیم</ButtonWhite>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-s-4 dir="rtl">
+        <div>
+          <h1>بلاگ ویدا</h1>
+          <Carousel :wrap-around="true" :itemsToShow="3" :itemsToScroll="3" :breakpoints="blog_slider_breakpoints">
+            <Slide v-for="slide in 9" :key="slide">
+              <CardBase class="carousel__item" :padding="23">
+                <img src="../assets/img/images/home/section4_img2.png" alt="slide">
+              </CardBase>
+            </Slide>
+
+            <template #addons="{ currentSlide }">
+              <Navigation/>
+              <SliderPagination :slide="currentSlide" :all="9" />
+            </template>
+          </Carousel>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -89,7 +142,28 @@ const section2Cards = [
 
 #home
 
-  > section[data-s-2]
+  .carousel__item
+    padding: 40px 0!important
+
+  .carousel__prev, .carousel__next
+    background-repeat: no-repeat
+    background-position: center
+    padding: 12px!important
+    width: 36px
+    height: 36px
+    background-color: $vida_brand_whitesmoke
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.08)
+
+    > *
+      display: none
+
+  .carousel__next
+    background-image: url("../assets/img/icon/icon_arrow_right_gray.svg")
+
+  .carousel__prev
+    background-image: url("../assets/img/icon/icon_arrow_left_gray.svg")
+
+  section[data-s-2]
 
     > div .inner
       padding: 24px 70px
@@ -126,4 +200,15 @@ const section2Cards = [
         > a:hover
           background-color: rgba(255, 143, 60, 0.25)
           color: $vida_brand_orange
+
+  section[data-s-4]
+
+    .inner
+      max-width: 295px
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: fill
+        border-radius: 16px
 </style>
