@@ -1,4 +1,18 @@
 <script lang="ts" setup>
+
+import {defineAsyncComponent} from "vue"
+
+const CardBase = defineAsyncComponent(() => import("../components/layout/CardBase.vue"))
+
+const section2Cards = [
+  { img: new URL("../assets/img/images/home/section2_campagn.svg", import.meta.url), title: "طراحی و اجرا کمپین تبلیغاتی", path: "/services" },
+  { img: new URL("../assets/img/images/home/section2_seo.svg", import.meta.url), title: "سئو سایت و بهینه سازی سایت", path: "/services" },
+  { img: new URL("../assets/img/images/home/section2_strategy.svg", import.meta.url), title: "طراحی استراتژی و برنامه ریزی تبلیغات آنلاین", path: "/services" },
+  { img: new URL("../assets/img/images/home/section2_content.svg", import.meta.url), title: "تولید محتوا وب سایت و شبکه های اجتماعی", path: "/services" },
+  { img: new URL("../assets/img/images/home/section2_webapp.svg", import.meta.url), title: "طراحی و پشتیبانی وب و اپلیکیشن", path: "/services" },
+  { img: new URL("../assets/img/images/home/section2_branding.svg", import.meta.url), title: "برندسازی و روابط عمومی دیجیتال", path: "/services" }
+]
+
 </script>
 
 <template>
@@ -35,8 +49,15 @@
       <div class="d-flex flex-column justify-content-start">
         <h1>خدمات تیم ویدا</h1>
 
-        <div>
-
+        <div class="row m-0">
+          <CardBase
+              v-for="item in section2Cards"
+              class="col-sm-4" :padding="23"
+              innerClass="flex-column"
+              :key="item">
+            <img :src="item.img" alt="">
+            <p>{{ item.title }}</p>
+          </CardBase>
         </div>
       </div>
     </section>
