@@ -4,13 +4,22 @@ import {defineAsyncComponent} from "vue"
 
 const CardBase = defineAsyncComponent(() => import("../components/layout/CardBase.vue"))
 
+
+
+import campaign from "../assets/img/images/home/section2_campaign.svg"
+import seo from "../assets/img/images/home/section2_seo.svg"
+import strategy from "../assets/img/images/home/section2_strategy.svg"
+import content from "../assets/img/images/home/section2_content.svg"
+import webapp from "../assets/img/images/home/section2_webapp.svg"
+import branding from "../assets/img/images/home/section2_branding.svg"
+
 const section2Cards = [
-  { img: new URL("../assets/img/images/home/section2_campagn.svg", import.meta.url), title: "طراحی و اجرا کمپین تبلیغاتی", path: "/services" },
-  { img: new URL("../assets/img/images/home/section2_seo.svg", import.meta.url), title: "سئو سایت و بهینه سازی سایت", path: "/services" },
-  { img: new URL("../assets/img/images/home/section2_strategy.svg", import.meta.url), title: "طراحی استراتژی و برنامه ریزی تبلیغات آنلاین", path: "/services" },
-  { img: new URL("../assets/img/images/home/section2_content.svg", import.meta.url), title: "تولید محتوا وب سایت و شبکه های اجتماعی", path: "/services" },
-  { img: new URL("../assets/img/images/home/section2_webapp.svg", import.meta.url), title: "طراحی و پشتیبانی وب و اپلیکیشن", path: "/services" },
-  { img: new URL("../assets/img/images/home/section2_branding.svg", import.meta.url), title: "برندسازی و روابط عمومی دیجیتال", path: "/services" }
+  { img: campaign, title: "طراحی و اجرا کمپین تبلیغاتی", path: "/services" },
+  { img: seo, title: "سئو سایت و بهینه سازی سایت", path: "/services" },
+  { img: strategy, title: "طراحی استراتژی و برنامه ریزی تبلیغات آنلاین", path: "/services" },
+  { img: content, title: "تولید محتوا وب سایت و شبکه های اجتماعی", path: "/services" },
+  { img: webapp, title: "طراحی و پشتیبانی وب و اپلیکیشن", path: "/services" },
+  { img: branding, title: "برندسازی و روابط عمومی دیجیتال", path: "/services" }
 ]
 
 </script>
@@ -49,14 +58,21 @@ const section2Cards = [
       <div class="d-flex flex-column justify-content-start">
         <h1>خدمات تیم ویدا</h1>
 
-        <div class="row m-0">
+        <div class="row">
           <CardBase
               v-for="item in section2Cards"
-              class="col-sm-4" :padding="23"
-              innerClass="flex-column"
+              class="col-md-4" :padding="23"
+              innerClass="flex-column justify-content-between align-items-center"
               :key="item">
-            <img :src="item.img" alt="">
-            <p>{{ item.title }}</p>
+            <img :src="item.img" :alt="item.title">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <p class="mb-0">{{ item.title }}</p>
+
+              <router-link :to="item.path">
+                اطلاعات بیشتر
+                <img src="../assets/img/icon/icon_arrow_left_orange.svg" alt="arrow">
+              </router-link>
+            </div>
           </CardBase>
         </div>
       </div>
@@ -65,3 +81,46 @@ const section2Cards = [
 </template>
 
 <style scoped lang="sass" src="../assets/sass/pages/home.sass"></style>
+<style lang="sass">
+@import ../assets/sass/public/colors
+
+#home
+
+  > section[data-s-2]
+
+    > div .inner
+      padding: 24px 70px
+      max-width: 350px
+      @media screen and (max-width: 1015px)
+        padding: 24px 50px
+
+      @media screen and (max-width: 895px)
+        padding: 20px 30px
+
+      > img
+        max-height: 140px
+
+      > div
+
+        > p
+          margin-top: 16px
+          color: $vida_brand_orange
+          font-size: 18px
+          text-align: center
+          font-weight: 500
+
+        > a
+          text-decoration: none
+          padding: 10px
+          border-radius: 360px
+          background-color: $vida_brand_whitesmoke
+          color: $vida_gray_3
+          font-weight: 500
+          font-size: 18px
+          transition: 0.2s
+          margin-top: 15px
+
+        > a:hover
+          background-color: rgba(255, 143, 60, 0.25)
+          color: $vida_brand_orange
+</style>

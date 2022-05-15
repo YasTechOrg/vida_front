@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <div class="cardBase d-flex justify-content-center align-items-center"
        :style="{ 'padding' : (typeof padding === 'number' ? `${padding}px` : '0px') }">
-    <div class="inner d-flex justify-content-center align-items-center" :class="innerClass">
+    <div class="inner d-flex" :class="innerClass">
       <slot/>
     </div>
   </div>

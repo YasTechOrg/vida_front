@@ -144,6 +144,12 @@
 
   section[data-s-2]
     margin-top: 64px
+    padding: 0 20px
+    background-image: url("../../img/images/home/section2_vector1.svg")
+    background-repeat: no-repeat
+    background-position: top 40px left 0
+    background-size: 90%
+    min-height: 1100px
 
     > div
       @include inner
@@ -152,7 +158,10 @@
         color: $vida_brand_orange
         font-size: 34px
         font-weight: 500
+        @media screen and (max-width: 770px)
+          text-align: center
+          font-size: 24px
+          margin-bottom: 60px
 
       > div
-        background-image: url("../../img/images/home/section2_vector1.svg")
-        background-repeat: no-repeat
+        margin: 0 -20px!important
