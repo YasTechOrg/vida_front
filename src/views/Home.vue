@@ -55,8 +55,11 @@ const section2Cards = [
     </section>
 
     <section data-s-2 dir="rtl">
-      <div class="d-flex flex-column justify-content-start">
+      <div class="d-flex flex-column justify-content-start position-relative">
         <h1>خدمات تیم ویدا</h1>
+
+        <img src="../assets/img/images/public/public_dots.svg" class="position-absolute" alt="dt1">
+        <img src="../assets/img/images/public/public_dots.svg" class="position-absolute d-none" alt="dt2">
 
         <div class="row">
           <CardBase
@@ -90,12 +93,12 @@ const section2Cards = [
 
     > div .inner
       padding: 24px 70px
-      max-width: 350px
       @media screen and (max-width: 1015px)
         padding: 24px 50px
 
       @media screen and (max-width: 895px)
         padding: 20px 30px
+        max-width: 300px
 
       > img
         max-height: 140px

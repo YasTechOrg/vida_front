@@ -47,9 +47,6 @@
         background-position: left -20% bottom 10%
 
       @media screen and (max-width: 740px)
-        background-position: left 90% bottom 6%
-
-      @media screen and (max-width: 740px)
         background-position: left 90% bottom 4%
         background-size: 99%
         height: 90%
@@ -143,21 +140,46 @@
             font-weight: 700
 
   section[data-s-2]
-    margin-top: 64px
+    margin-top: 74px
     padding: 0 20px
     background-image: url("../../img/images/home/section2_vector1.svg")
     background-repeat: no-repeat
-    background-position: top 40px left 0
+    background-position: top 25px left 0
     background-size: 90%
-    min-height: 1100px
+    min-height: 1400px
+    @media screen and (max-width: 1440px)
+      background-size: 98%
+      min-height: 1200px
+
+    @media screen and (max-width: 770px)
+      padding: 0
+      background-position: top 60px left 0
+
+    img[alt=dt1]
+      left: 0
+      top: -20px
+      z-index: -9
+      @media screen and (max-width: 770px)
+        top: 30%
+        left: unset
+        right: 0
+
+    img[alt=dt2]
+      @media screen and (max-width: 770px)
+        display: unset!important
+        left: 0
+        bottom: 30%
+        z-index: -9
 
     > div
+      z-index: 999
       @include inner
 
       > h1
         color: $vida_brand_orange
         font-size: 34px
         font-weight: 500
+        margin-bottom: 40px
         @media screen and (max-width: 770px)
           text-align: center
           font-size: 24px
