@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {computed, defineProps, nextTick, onBeforeUnmount, onMounted, reactive, ref, watch} from "vue"
+import {computed, defineProps, onMounted, reactive, ref, watch} from "vue"
 
 const data = reactive({
   width: window.innerWidth
@@ -8,6 +8,7 @@ const data = reactive({
 const width = computed(() => data.width)
 
 const slides = ref(3)
+
 const slides_ref = computed({
   get() {
     return slides.value
@@ -17,8 +18,10 @@ const slides_ref = computed({
     slides.value = value
   }
 })
+
 if (data.width >= 1140) slides_ref.value = 3
 else if (data.width < 770 && data.width >= 0) slides_ref.value = 1
+
 onMounted(() => {
   window.onresize = () => {
     data.width = window.innerWidth
