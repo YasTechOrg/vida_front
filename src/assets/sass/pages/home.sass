@@ -227,7 +227,7 @@
           content: ""
           width: 301px
           height: 223px
-          background-image: url("../../img/images/public/public_dots.svg")
+          background-image: url("../../img/images/public/public_dots1.svg")
           background-repeat: no-repeat
           right: -80px
           top: -90px
@@ -438,14 +438,49 @@
             justify-content: center!important
 
   section[data-s-7]
+    padding: 0 20px
     margin-top: 103px
 
     > div
       @include inner(1440px)
+      @media screen and (min-width: 870px)
+        background-image: url("../../img/images/public/public_dots2.svg")
+        background-repeat: no-repeat
+        background-position: left 0 top 34px
+
+      @media screen and (max-width: 870px)
+        align-items: center!important
 
       > h1
         color: $vida_brand_orange
         font-size: 34px
         font-weight: 500
-        margin-bottom: 30px
+        margin-bottom: 70px
+        @media screen and (max-width: 870px)
+          font-size: 24px
+          font-weight: 600
+          margin-bottom: 40px
 
+      > .items
+        @media screen and (max-width: 870px)
+          display: none
+
+        @media screen and (min-width: 870px)
+          margin: 0 -12px
+
+        > div > div
+          padding: 12px
+          width: 50%
+          aspect-ratio: 1
+
+          > div
+            background-color: #F1F1F1
+            border-radius: 8px
+            height: 100%
+            width: 100%
+            padding: 10px
+
+      > .carousel
+        width: 100%
+        @media screen and (min-width: 870px)
+          display: none

@@ -3,12 +3,26 @@
 // IMPORTS
 import {defineAsyncComponent, ref} from "vue"
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
+
 import campaign from "../assets/img/images/home/section2_campaign.svg"
 import seo from "../assets/img/images/home/section2_seo.svg"
 import strategy from "../assets/img/images/home/section2_strategy.svg"
 import content from "../assets/img/images/home/section2_content.svg"
 import webapp from "../assets/img/images/home/section2_webapp.svg"
 import branding from "../assets/img/images/home/section2_branding.svg"
+
+import section7_cs50_1 from "../assets/img/images/home/section7_cs50_1.svg"
+import section7_aramesh from "../assets/img/images/home/section7_aramesh.svg"
+import section7_podium from "../assets/img/images/home/section7_podium.svg"
+import section7_zhaket from "../assets/img/images/home/section7_zhaket.svg"
+import section7_nikpardakht from "../assets/img/images/home/section7_nikpardakht.svg"
+import section7_abrarvan from "../assets/img/images/home/section7_abrarvan.svg"
+import section7_duckboard from "../assets/img/images/home/section7_duckboard.svg"
+import section7_karoevent from "../assets/img/images/home/section7_karoevent.svg"
+import section7_diginext from "../assets/img/images/home/section7_diginext.svg"
+import section7_alibaba from "../assets/img/images/home/section7_alibaba.svg"
+import section7_cs50_2 from "../assets/img/images/home/section7_cs50_2.svg"
+import section7_puzzle from "../assets/img/images/home/section7_puzzle.svg"
 
 // COMPONENTS
 const CardBase = defineAsyncComponent(() => import("../components/layout/CardBase.vue"))
@@ -39,6 +53,19 @@ const blog_slider_breakpoints = ref({
     snapAlign: 'start',
   },
 })
+
+// SECTION 7 COMPANY LOGOS
+const section7CompanyLogos = [
+  [
+      section7_cs50_1, section7_aramesh, section7_duckboard, section7_karoevent
+  ],
+  [
+      section7_podium, section7_zhaket, section7_diginext, section7_alibaba
+  ],
+  [
+     section7_nikpardakht, section7_abrarvan, section7_cs50_2, section7_puzzle
+  ]
+]
 </script>
 
 <template>
@@ -78,8 +105,8 @@ const blog_slider_breakpoints = ref({
       <div class="d-flex flex-column justify-content-start position-relative">
         <h1>خدمات تیم ویدا</h1>
 
-        <img src="../assets/img/images/public/public_dots.svg" class="position-absolute" alt="dt1">
-        <img src="../assets/img/images/public/public_dots.svg" class="position-absolute d-none" alt="dt2">
+        <img src="../assets/img/images/public/public_dots1.svg" class="position-absolute" alt="dt1">
+        <img src="../assets/img/images/public/public_dots1.svg" class="position-absolute d-none" alt="dt2">
 
         <div class="row">
           <CardBase
@@ -135,7 +162,7 @@ const blog_slider_breakpoints = ref({
 
             <template #addons="{ currentSlide }">
               <Navigation/>
-              <SliderPagination :slide="currentSlide" :all="9" />
+              <SliderPagination :slide="currentSlide" :all="9" breakpoint="blog" />
             </template>
           </Carousel>
         </div>
@@ -195,9 +222,32 @@ const blog_slider_breakpoints = ref({
       <section data-s-7 dir="rtl">
         <div class="d-flex flex-column justify-content-start align-items-start">
           <h1>مشتریان ویدا</h1>
-          <div class="row m-0">
-
+          <div class="row items" dir="ltr">
+            <div class="col-md-4 row m-0 p-0" v-for="item in section7CompanyLogos" :key="item">
+              <div class="col-md-6 d-flex justify-content-center align-items-center" v-for="company in item" :key="company">
+                <div class="d-flex justify-content-center align-items-center">
+                  <img :src="company" alt="company">
+                </div>
+              </div>
+            </div>
           </div>
+
+          <Carousel :wrap-around="true" :itemsToShow="1">
+            <Slide v-for="slide in section7CompanyLogos" :key="slide" class="d-flex justify-content-center align-items-center">
+              <div class="row m-0">
+                <div class="col-6 d-flex justify-content-center align-items-center" v-for="company in slide" :key="company">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <img :src="company" alt="company">
+                  </div>
+                </div>
+              </div>
+            </Slide>
+
+            <template #addons="{ currentSlide }">
+              <Navigation/>
+              <SliderPagination :slide="currentSlide" :all="3" />
+            </template>
+          </Carousel>
         </div>
       </section>
     </div>
@@ -280,4 +330,24 @@ const blog_slider_breakpoints = ref({
         height: 100%
         object-fit: fill
         border-radius: 16px
+
+  section[data-s-7]
+
+    .carousel__slide
+
+      > div
+        max-width: 304px
+
+        > div
+          padding: 12px
+          width: 50%
+          aspect-ratio: 1
+
+          > div
+            background-color: #F1F1F1
+            border-radius: 8px
+            height: 100%
+            width: 100%
+            padding: 10px
+
 </style>

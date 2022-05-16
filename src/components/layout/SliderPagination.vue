@@ -1,6 +1,12 @@
 <script lang="ts" setup>
 import {computed, defineProps, onMounted, reactive, ref, watch} from "vue"
 
+const props = defineProps<{
+  slide: number,
+  all: number,
+  breakpoint: string
+}>()
+
 const data = reactive({
   width: window.innerWidth
 })
@@ -20,18 +26,13 @@ const slides_ref = computed({
 })
 
 if (data.width >= 1140) slides_ref.value = 3
-else if (data.width < 770 && data.width >= 0) slides_ref.value = 1
+else if (data.width < 1140 && data.width >= 0) slides_ref.value = 1
 
 onMounted(() => {
   window.onresize = () => {
     data.width = window.innerWidth
   }
 })
-
-const props = defineProps<{
-  slide: number,
-  all: number
-}>()
 
 watch(width, async () => {
   if (data.width >= 1140) slides_ref.value = 3
