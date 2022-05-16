@@ -53,4 +53,5 @@ yarn build
 
 ### Screen Shots
 ![Screen Shot1](./screenshots/p1.png)
-![Screen Shot3](./screenshots/p2.png)
+![Screen Shot2](./screenshots/p2.png)
+![Screen Shot3](./screenshots/p3.png)
