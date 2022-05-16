@@ -166,12 +166,21 @@ const blog_slider_breakpoints = ref({
       <section data-s-6 dir="rtl">
 
         <div class="row m-0">
-          <div class="col-md-6">
-
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="position-relative">
+              <picture class="position-absolute">
+                <img src="../assets/img/images/home/section6_img1.png" alt="img1">
+              </picture>
+              <img src="../assets/img/images/home/section6_img2.png" class="position-absolute" alt="img2">
+            </div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
             <h1>برگزاری رویدادهایتان را به ما بسپارید</h1>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+            <div class="d-flex justify-content-end align-items-center w-100">
+              <ButtonWhite>اطلاعات بیشتر</ButtonWhite>
+            </div>
           </div>
         </div>
 
