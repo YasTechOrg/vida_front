@@ -29,6 +29,7 @@ const CardBase = defineAsyncComponent(() => import("../components/layout/CardBas
 const ButtonWhite = defineAsyncComponent(() => import("../components/widget/ButtonWhite.vue"))
 const ButtonOrange = defineAsyncComponent(() => import("../components/widget/ButtonOrange.vue"))
 const SliderPagination = defineAsyncComponent(() => import("../components/layout/SliderPagination.vue"))
+const FeedForm = defineAsyncComponent(() => import("../components/widget/FeedForm.vue"))
 
 // SECTION 2 CARDS DATA
 const section2Cards = [
@@ -250,6 +251,9 @@ const section7CompanyLogos = [
           </Carousel>
         </div>
       </section>
+
+      <!-- SECTION 8 -->
+      <FeedForm/>
     </div>
   </div>
 </template>

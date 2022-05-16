@@ -1,0 +1,92 @@
+@import ../public/colors
+
+.feedForm
+  width: 100%
+  background-image: url("../../img/images/add_service/bg1.png")
+  background-repeat: no-repeat
+  background-size: 100%
+  padding: 0 20px
+
+  @media screen and (max-width: 1050px)
+
+    > img
+      width: 120px
+
+  > form::after
+    position: absolute
+    content: ""
+    right: 10px
+    left: 10px
+    background-image: url("../../img/images/add_service/bg2.png")
+    background-repeat: no-repeat
+    background-position: bottom
+    background-size: cover
+    height: 48px
+    bottom: -40px
+    opacity: 0.7
+    z-index: -2
+
+    @media screen and (max-width: 500px)
+      bottom: -30px
+
+    @media screen and (max-width: 400px)
+      bottom: -25px
+
+  > form
+    max-width: 650px
+    width: 100%
+    background-color: $vida_neutral_white
+    border-radius: 16px
+    padding: 35px 35px 50px
+
+    > h1
+      font-size: 34px
+      color: $vida_brand_orange
+      font-weight: 500
+      margin-bottom: 44px
+      @media screen and (max-width: 500px)
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 35px
+
+    > label:not(:last-child)
+      margin-bottom: 20px
+
+    > label
+      width: 100%
+      max-width: 420px
+
+      > span
+        color: $vida_gray_4
+        font-size: 18px
+        font-weight: 500
+
+      > input, select
+        margin-top: 8px
+        width: 100%
+        background-color: $vida_brand_whitesmoke
+        border: none
+        outline: none
+        border-radius: 8px
+        padding: 10px 15px
+
+      > select
+        background-position: left 17px center
+        background-image: url("../../img/icon/icon_arrow_bottom.svg")
+        background-size: 9px 4px
+
+      > select:focus, > select:active
+        outline: none
+        box-shadow: none
+
+    > button
+      background-color: $vida_brand_orange
+      border: none
+      outline: none
+      color: $vida_neutral_white
+      padding: 14px 45px
+      font-size: 18px
+      font-weight: 500
+      border-radius: 16px
+      box-shadow: 4px 4px 15px rgba(255, 121, 0, 0.3)
+      bottom: -25px
