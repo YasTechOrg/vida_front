@@ -1,13 +1,8 @@
 <script lang="ts" setup>
 
+// IMPORTS
 import {defineAsyncComponent, ref} from "vue"
-
-const CardBase = defineAsyncComponent(() => import("../components/layout/CardBase.vue"))
-const ButtonWhite = defineAsyncComponent(() => import("../components/widget/ButtonWhite.vue"))
-const ButtonOrange = defineAsyncComponent(() => import("../components/widget/ButtonOrange.vue"))
-const SliderPagination = defineAsyncComponent(() => import("../components/layout/SliderPagination.vue"))
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
-
 import campaign from "../assets/img/images/home/section2_campaign.svg"
 import seo from "../assets/img/images/home/section2_seo.svg"
 import strategy from "../assets/img/images/home/section2_strategy.svg"
@@ -15,6 +10,13 @@ import content from "../assets/img/images/home/section2_content.svg"
 import webapp from "../assets/img/images/home/section2_webapp.svg"
 import branding from "../assets/img/images/home/section2_branding.svg"
 
+// COMPONENTS
+const CardBase = defineAsyncComponent(() => import("../components/layout/CardBase.vue"))
+const ButtonWhite = defineAsyncComponent(() => import("../components/widget/ButtonWhite.vue"))
+const ButtonOrange = defineAsyncComponent(() => import("../components/widget/ButtonOrange.vue"))
+const SliderPagination = defineAsyncComponent(() => import("../components/layout/SliderPagination.vue"))
+
+// SECTION 2 CARDS DATA
 const section2Cards = [
   { img: campaign, title: "طراحی و اجرا کمپین تبلیغاتی", path: "/services" },
   { img: seo, title: "سئو سایت و بهینه سازی سایت", path: "/services" },
@@ -24,7 +26,7 @@ const section2Cards = [
   { img: branding, title: "برندسازی و روابط عمومی دیجیتال", path: "/services" }
 ]
 
-
+// BLOG SLIDER BREAKPOINTS
 const blog_slider_breakpoints = ref({
   1140: {
     itemsToShow: 3,
@@ -37,11 +39,12 @@ const blog_slider_breakpoints = ref({
     snapAlign: 'start',
   },
 })
-
 </script>
 
 <template>
   <div id="home" data-safe>
+
+    <!-- SECTION 1 -->
     <section data-s-1 dir="rtl">
       <div class="row position-relative">
         <div class="position-absolute mouse">
@@ -70,6 +73,7 @@ const blog_slider_breakpoints = ref({
       </div>
     </section>
 
+    <!-- SECTION 2 -->
     <section data-s-2 dir="rtl">
       <div class="d-flex flex-column justify-content-start position-relative">
         <h1>خدمات تیم ویدا</h1>
@@ -97,7 +101,10 @@ const blog_slider_breakpoints = ref({
       </div>
     </section>
 
+    <!-- SECTION GROUP 1 -->
     <div class="d-flex flex-column" data-sg-1>
+
+      <!-- SECTION 3 -->
       <section data-s-3 dir="rtl" class="d-flex justify-content-center align-items-start">
         <div class="row m-0 w-100">
           <div class="col-md-6 d-flex justify-content-end align-items-center">
@@ -115,6 +122,7 @@ const blog_slider_breakpoints = ref({
         </div>
       </section>
 
+      <!-- SECTION 4 -->
       <section data-s-4 dir="rtl">
         <div>
           <h1>بلاگ ویدا</h1>
@@ -134,6 +142,7 @@ const blog_slider_breakpoints = ref({
       </section>
     </div>
 
+    <!-- SECTION 5 -->
     <div class="d-flex flex-column" data-sg-2>
       <section data-s-5 dir="rtl">
         <div class="row m-0">
@@ -143,7 +152,6 @@ const blog_slider_breakpoints = ref({
             <ButtonWhite>مشاهده دوره ها</ButtonWhite>
           </div>
           <div class="col-md-6 d-flex justify-content-center align-items-center">
-
             <div class="row m-0">
               <div class="col-6">
 
@@ -158,13 +166,12 @@ const blog_slider_breakpoints = ref({
 
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
+      <!-- SECTION 6 -->
       <section data-s-6 dir="rtl">
-
         <div class="row m-0">
           <div class="col-md-6 d-flex justify-content-center align-items-center">
             <div class="position-relative">
@@ -174,7 +181,6 @@ const blog_slider_breakpoints = ref({
               <img src="../assets/img/images/home/section6_img2.png" class="position-absolute" alt="img2">
             </div>
           </div>
-
           <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
             <h1>برگزاری رویدادهایتان را به ما بسپارید</h1>
             <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
@@ -183,7 +189,16 @@ const blog_slider_breakpoints = ref({
             </div>
           </div>
         </div>
+      </section>
 
+      <!-- SECTION 7 -->
+      <section data-s-7 dir="rtl">
+        <div class="d-flex flex-column justify-content-start align-items-start">
+          <h1>مشتریان ویدا</h1>
+          <div class="row m-0">
+
+          </div>
+        </div>
       </section>
     </div>
   </div>
@@ -191,6 +206,7 @@ const blog_slider_breakpoints = ref({
 
 <style scoped lang="sass" src="../assets/sass/pages/home.sass"></style>
 <style lang="sass">
+// NON SCOPED STYLES
 @import ../assets/sass/public/colors
 
 #home
