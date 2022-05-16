@@ -133,6 +133,50 @@ const blog_slider_breakpoints = ref({
         </div>
       </section>
     </div>
+
+    <div class="d-flex flex-column" data-sg-2>
+      <section data-s-5 dir="rtl">
+        <div class="row m-0">
+          <div class="col-md-6 d-flex flex-column justify-content-center align-items-start">
+            <h1>اکادمی ویدا</h1>
+            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.</p>
+            <ButtonWhite>مشاهده دوره ها</ButtonWhite>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center align-items-center">
+
+            <div class="row m-0">
+              <div class="col-6">
+
+              </div>
+              <div class="col-6">
+
+              </div>
+              <div class="col-6">
+
+              </div>
+              <div class="col-6">
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section data-s-6 dir="rtl">
+
+        <div class="row m-0">
+          <div class="col-md-6">
+
+          </div>
+
+          <div class="col-md-6">
+            <h1>برگزاری رویدادهایتان را به ما بسپارید</h1>
+          </div>
+        </div>
+
+      </section>
+    </div>
   </div>
 </template>
 

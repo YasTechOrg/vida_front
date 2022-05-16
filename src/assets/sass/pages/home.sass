@@ -179,7 +179,7 @@
           margin: 0
 
   div[data-sg-1]
-    background-image: url("../../img/images/home/section3_bg1.svg")
+    background-image: url("../../img/images/home/sg1_bg1.svg")
     background-repeat: no-repeat
     background-position: right
     background-size: contain
@@ -276,3 +276,84 @@
           font-size: 24px
           font-weight: 600
           text-align: center
+
+  div[data-sg-2]
+    background-image: url("../../img/images/home/sg2_bg1.svg")
+    background-repeat: no-repeat
+    background-size: 80%
+    margin-top: 18px
+
+  section[data-s-5]
+    padding: 0 20px
+
+    > div
+      @include inner(1440px)
+      padding: 90px 0
+
+      > div
+        @media screen and (max-width: 1000px)
+          width: 100%
+
+      > .col-md-6:first-child
+        @media screen and (max-width: 1000px)
+          order: 1
+          padding-top: 30px
+          align-items: center!important
+
+        > h1
+          color: $vida_brand_orange
+          font-size: 34px
+          font-weight: 500
+          margin-bottom: 30px
+          @media screen and (max-width: 1000px)
+            font-size: 24px
+            font-weight: 600
+            text-align: center
+
+        > p
+          font-size: 24px
+          font-weight: 300
+          max-width: 482px
+          margin-bottom: 60px
+          color: $vida_gray_5
+          @media screen and (max-width: 1000px)
+            font-size: 18px
+            text-align: justify
+            margin-bottom: 40px
+
+      > .col-md-6:last-child
+        @media screen and (max-width: 1000px)
+          order: 0
+
+        > div
+          max-width: 432px
+          @media screen and (max-width: 500px)
+            max-width: 549px
+
+          @media screen and (max-width: 435px)
+            max-width: 260px
+
+          > div
+            width: 216px
+            height: 216px
+            padding: 0
+            background-color: white
+            @media screen and (max-width: 500px)
+              width: 183px
+              height: 183px
+
+            @media screen and (max-width: 435px)
+              width: 130px
+              height: 130px
+
+  section[data-s-6]
+    padding: 0 20px
+
+    > div
+      @include inner(1440px)
+      padding: 100px 0
+
+      > .col-md-6:last-child
+        color: $vida_brand_orange
+        font-size: 34px
+        font-weight: 500
