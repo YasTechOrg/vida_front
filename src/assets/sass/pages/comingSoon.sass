@@ -1,0 +1,44 @@
+@import "../../sass/public/colors"
+
+
+#comingSoon
+  > div
+    height: 88vh
+    background: url("../../img/images/coming_soon.svg") no-repeat center
+    padding: 20px
+
+    button
+      background-color: $vida_brand_orange
+      padding: 11px 60px
+      box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.1)
+      border-radius: 16px
+      margin-bottom: 150px
+
+      a
+        color: white
+        text-decoration: none
+        font-size: 18px
+        font-weight: 500
+
+
+    div:first-child
+      margin-top: 80px
+
+      p:first-child
+        font-weight: 800
+        font-size: 64px
+        color: $vida_brand_orange
+
+      p:last-child
+        font-weight: 300
+        font-size: 24px
+        color: $vida_brand_gray
+
+  @media screen and (max-width: 425px)
+    div:first-child
+      p:first-child
+        font-size: 40px!important
+
+      p:last-child
+        font-size: 17px!important
+
