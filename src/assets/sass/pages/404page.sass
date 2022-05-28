@@ -1,0 +1,60 @@
+@import "../public/colors"
+
+#page_404
+  > div
+    height: 88vh
+    background: url("../../img/images/404page_bg.svg") no-repeat bottom
+    background-size: 100%
+
+    div:first-child
+      padding: 20px
+
+      img:first-child
+        width: 100%
+        max-width: 300px
+
+      p.second
+        color: $vida_brand_orange
+        font-weight: 900
+        font-size: 64px
+
+
+      p:last-child
+        color: $vida_brand_gray
+        font-weight: 300
+        font-size: 26px
+
+
+    div:last-child
+      button
+        margin-top: 200px
+        background-color: $vida_gray_1
+        padding: 11px 60px
+        box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.1)
+        border-radius: 16px
+
+        a
+          color: $vida_brand_orange
+          text-decoration: none
+          font-size: 18px
+          font-weight: 500
+
+
+  @media screen and (max-width: 1050px)
+    > div
+      background-size: 170% !important
+
+
+  @media screen and (max-width: 576px)
+    > div
+      background-size: 270% !important
+      margin-bottom: 150px
+
+      div:first-child
+        p.second > span
+          display: none
+
+
+
+
+

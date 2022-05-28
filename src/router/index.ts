@@ -34,6 +34,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "/projects/add2",
         component: () => import("../views/AddProjects2.vue")
     },
+    {
+        path: "/:pathMatch(.*)*",
+        component: () => import("../views/404page.vue"),
+
+    },
 ]
 
 const router = createRouter({
